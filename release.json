@@ -1,0 +1,42 @@
+{
+  "version": "1.4.3",
+  "stages": 6,
+  "totalZombies": 270,
+  "elitePerStage": 1,
+  "eliteHP": [
+    6,
+    10,
+    14,
+    18,
+    22,
+    26
+  ],
+  "weapons": 6,
+  "files": {
+    "assets/audio/ambience.wav": "e037f643b36cc8896d54b80d6b93f86a66f57395c403289b915254cd67f817e2",
+    "assets/audio/blast.wav": "d939448b80a495ce7ac24a1b4a77d4855c1eb8fea8e35f59f028eb7e778684bc",
+    "assets/audio/hit.wav": "6eb347a3cbe99e413dcae4be1f09d6c7e575f45d3b7063c72a4757ca828670d4",
+    "assets/audio/hurt.wav": "5a0b242a875630fa3555a28f376f07e203b3edd2de1cbbac00ae33090071a021",
+    "assets/audio/launcher.wav": "46dcd308bb30f3314f9101742a76f66300004e219754e7d6efebaac88ae31ba4",
+    "assets/audio/pulse.wav": "4494e970f416f60737c78f3f8dc811cc08457b8e5d58bbe9c69285c82ef50b6e",
+    "assets/audio/reload.wav": "ef1784365d808d936566dce2dc877da68efeb37f647fa1aab0f0b581fab1bbf9",
+    "assets/audio/reward.wav": "06980295f450c8e00d9629fed012021bd83edb5a028804dacaba98efa58660a6",
+    "assets/audio/rifle.wav": "7fbabf9fb4254b1b94066c987329fa0f23ad964462963881b86e00ec3bd1a770",
+    "assets/audio/shot.wav": "a81a66b8662b0871675f6b59030f841a3e3c3805d2b97ec7fe826db4e6e43f5f",
+    "assets/audio/shotgun.wav": "51ddd84e875de2a1babcaf3e44e5b4153819e6d4a1445e08304a1741f3ea136b",
+    "assets/audio/smg.wav": "0bb0d4e9e3ee12997be798a445490b63f9d29281d58fab5b4d86609e4cc93ddf",
+    "assets/audio/test.wav": "9cd45eb6403a045c80622052ebf4c8f4b5bbd23d2c2b02fb100aec82d5f73d5b",
+    "assets/audio/unlock.wav": "a003072244b73fa9aa0d1eaa5a7f0aa8fd909a6073b2f2f22c2366c4ef19af82",
+    "assets/audio/warning.wav": "509b6cb5fa0d235208ac63781b53e9da36fb5ee47d1a33a495354196888f5a75",
+    "assets/audio/wave.wav": "c8b05ab1bf7828658065ffec5db6a5f080c7d161297c3ebb70f3689af510b225",
+    "assets/street.jpeg": "46731fe5aab3b7e2642016c341c029b47931b5d81fb0666ac7ece2dea855d279",
+    "assets/survivor.jpeg": "95bbd85f7664c4870919a0c5a6a5a047dca9e391b5e72d8a181b411303f0dc08",
+    "assets/zombie.jpeg": "9f5eb3dbb8519ae72836e1128c3e7c7738dd1edf59f3d815fd0dbce0674ff633",
+    "audio.js": "496eb9da4cc3489c1f447c021154acec79481872995384679cae7525e612e829",
+    "engine.js": "64bc80ffa064182f5c65ba8bd7f9ddb3ced291e82397dcaf7be8f04745ae96b8",
+    "game.js": "ea026ba9836f7bcf704161f43152fbe6b39ee6dc0243bce7bdff671f5def221e",
+    "icon.svg": "9ada1167f6ec65f71c5cf92681bd2bb6f11c92e77941c5edf9ff4a8a4fe3b5f8",
+    "index.html": "922d711ec5ab62fa5e8b532e6f730e0a92a18759f4a6b90e9cb969e7b782d7eb",
+    "style.css": "8038351a7796b5d1c7fb5e947cc36eb94f1001945092b91e9c399b34be5552b0"
+  }
+}

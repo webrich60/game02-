@@ -122,3 +122,5 @@ body{touch-action:manipulation}#world,#hud{touch-action:none}.modal,.modal-card{
 }
 @media(max-height:360px) and (orientation:landscape){.radar-panel>small{display:none}.radar-panel{top:calc(115px + env(safe-area-inset-top));transform:scale(.6)}}
 @media(max-height:300px) and (orientation:landscape){.radar-panel{left:calc(max(16px,env(safe-area-inset-left)) + 112px)}}
+
+.audio-alternative{width:100%;margin:12px 0 4px;min-height:44px;border:1px solid #d8c49a77;background:#2b3023;color:#eee4c4;font:inherit;font-size:12px;touch-action:manipulation}
