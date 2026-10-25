@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#101917">
+  <meta name="description" content="霧に包まれた商店街で、生き延びろ。スマホでも遊べる3Dゾンビサバイバル。">
+  <title>残響街 — DEAD SIGNAL</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=1.4.0">
+</head>
+<body>
+  <canvas id="world" aria-label="3Dゾンビゲーム画面"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="残響街 ホーム"><span class="brand-mark">╋</span><span>DEAD SIGNAL<small>残響街</small></span></a>
+    <div class="top-actions"><span class="live-dot"></span><span class="sector">TOKYO · SECTOR 07</span><button id="sound" class="icon-button" aria-label="サウンドをオンにする" title="サウンド">♪<span class="sound-slash hidden">／</span><small id="sound-state">TAP</small></button><button id="help" class="icon-button" aria-label="操作方法">?</button><button id="pause" class="icon-button hidden" aria-label="一時停止">Ⅱ</button></div>
+  </header>
+
+  <main id="landing">
+    <div class="hero-copy">
+      <div class="eyebrow"><span></span> 3D SURVIVAL HORROR <b>01</b></div>
+      <h1>残響街<span>DEAD SIGNAL</span></h1>
+      <p class="tagline">この街には、まだ何かがいる。</p>
+      <p class="intro">全6面・270体。突破ボーナスで新武器を獲得。<br>残機は3。接触を避けて夜明けまで。</p>
+      <div class="mission-info"><div><small>LOCATION</small><span>旧市街・七番商店街</span></div><div><small>THREAT LEVEL</small><span class="danger">高危険度 <i></i><i></i><i></i><i class="dim"></i></span></div></div>
+      <button id="start" class="start-button" disabled><span class="button-icon">↗</span><span id="start-label">装備を準備中…</span><span class="button-arrow">→</span></button>
+      <div class="play-note"><span class="tiny-screen"></span><span id="device-note">スマホ・PC対応 / インストール不要</span><span id="resume-note" class="hidden"></span><button id="new-run" class="reset-run hidden">最初から</button></div>
+      <p id="load-error" class="load-error" role="alert"></p>
+    </div>
+    <aside class="operative"><div class="operative-top"><span>YOUR OPERATIVE</span><b>01 / SURVIVOR</b></div><div class="portrait"><img src="assets/survivor.jpeg" alt="帽子と拳銃を装備した生存者"><div class="portrait-lines"></div><span class="portrait-status">● &nbsp; READY TO DEPLOY</span></div><div class="operative-bottom"><div><small>CALLSIGN</small><strong>THE WANDERER</strong></div><span class="operative-cross">+</span></div><div class="weapon-line"><span>SIDEARM</span><b>9mm PISTOL</b><span>12 ROUNDS</span></div></aside>
+    <div class="bottom-bar"><div class="radio"><span class="radio-icon">▥</span><p><small>LAST TRANSMISSION / 02:47 AM</small><span>「七番街に近づくな。繰り返す…」</span></p><div class="waveform">▂▅▃▇▂▅▁▃▆▂▅▃▁▂</div></div><span class="bottom-note">HEADPHONES RECOMMENDED <span>↗</span></span></div>
+    <span class="image-caption">07 — THE ABANDONED ARCADE</span>
+  </main>
+
+  <div id="hud" class="hidden">
+    <div class="health-panel"><small>CHANCES LEFT</small><div class="health-line"><span>◇</span><b id="lives">3</b><span class="health-unit">/ 3</span></div><div class="health-track"><i id="lives-bar"></i></div><small class="contact-rule">接触で1ミス</small></div>
+    <div class="wave-panel"><small id="wave-label">STAGE 01 / 06</small><span id="stage-name">霧の入口</span><strong id="enemies-label">残り 30 / 30 体</strong><div class="wave-progress"><i id="wave-progress"></i></div></div>
+    <div id="elite-panel" class="hidden" aria-label="強化ゾンビの体力"><small id="elite-label"></small><span id="elite-health"></span><div><i id="elite-bar"></i></div></div>
+    <div class="score-panel"><small>ELIMINATED</small><b id="kills">00</b></div>
+    <div id="crosshair"><i></i><i></i><i></i><i></i><b></b></div><div id="hitmarker">╳</div>
+    <div id="announcement"><small id="announcement-small"></small><strong id="announcement-title"></strong></div>
+    <div id="game-tip">左で移動 · FIREを押してスライドで照準＋射撃</div>
+    <div class="ammo-panel"><small id="weapon-name">HANDGUN</small><small id="weapon-mode">精密射撃 · 予備弾∞</small><div><b id="ammo">12</b><span id="weapon-capacity">/ 12</span></div><small id="ammo-status">リロード弾薬は無制限</small></div>
+    <div class="desktop-hint"><kbd>W A S D</kbd> 移動 <kbd>ドラッグ</kbd> 視点 <kbd>SPACE</kbd> 射撃 <kbd>R</kbd> 装填</div>
+    <div id="joystick" aria-label="移動ジョイスティック"><span class="stick-ring"></span><span id="stick"></span><small>MOVE</small></div>
+    <div class="radar-panel"><div id="radar" aria-label="近くの敵の方向。上が前方"></div><small id="threat-label">周囲を警戒</small></div><span id="stage-tactic"></span>
+    <nav id="turn-controls" aria-label="向きを変える"><button id="turn-left" aria-label="左へ90度回転">↶<small>左90°</small></button><button id="turn-back" aria-label="180度振り向く">↺<small>振り向き</small></button><button id="turn-right" aria-label="右へ90度回転">↷<small>右90°</small></button></nav>
+    <div id="look-zone" aria-label="スワイプで視点を操作"></div>
+    <button id="reload" class="game-button reload" aria-label="リロード"><span>⟳</span><small>RELOAD</small></button>
+    <button id="weapon-switch" class="game-button weapon-switch" aria-label="武器を選ぶ" disabled><span id="weapon-icon"></span><small>武器切替</small></button>
+    <button id="fire" class="game-button fire" aria-label="射撃"><span>⌖</span><small>FIRE</small></button>
+    <div id="damage-flash"></div><div id="muzzle-flash"></div>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-card"><small id="modal-eyebrow">FIELD MANUAL</small><h2 id="modal-title">生き残るために。</h2><div id="modal-body"></div><button id="modal-primary" class="start-button"><span id="modal-button-label">了解した</span><span>→</span></button><button id="modal-secondary" class="text-button hidden">タイトルへ戻る</button></div></div>
+  <script src="engine.js"></script><script src="audio.js?v=1.4.0"></script><script src="game.js?v=1.4.0"></script>
+</body>
+</html>
