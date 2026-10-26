@@ -7,7 +7,7 @@
   <meta name="description" content="霧に包まれた商店街で、生き延びろ。スマホでも遊べる3Dゾンビサバイバル。">
   <title>残響街 — DEAD SIGNAL</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=1.4.3">
+  <link rel="stylesheet" href="style.css?v=1.5.1">
 </head>
 <body>
   <canvas id="world" aria-label="3Dゾンビゲーム画面"></canvas>
@@ -22,10 +22,10 @@
       <div class="eyebrow"><span></span> 3D SURVIVAL HORROR <b>01</b></div>
       <h1>残響街<span>DEAD SIGNAL</span></h1>
       <p class="tagline">この街には、まだ何かがいる。</p>
-      <p class="intro">全6面・270体。突破ボーナスで新武器を獲得。<br>各面に強化個体1体。残機は3。夜明けまで生き残れ。</p>
+      <p class="intro">全6面・270体。突破ボーナスで新武器を獲得。<br>強化個体は各面1〜6体。残機は3。夜明けまで生き残れ。</p>
       <div class="mission-info"><div><small>LOCATION</small><span>旧市街・七番商店街</span></div><div><small>THREAT LEVEL</small><span class="danger">高危険度 <i></i><i></i><i></i><i class="dim"></i></span></div></div>
       <button id="start" class="start-button" disabled><span class="button-icon">↗</span><span id="start-label">装備を準備中…</span><span class="button-arrow">→</span></button>
-      <div class="play-note"><span class="tiny-screen"></span><span id="device-note">スマホ・タブレット・PC対応 · v1.4.3</span><span id="resume-note" class="hidden"></span><button id="new-run" class="reset-run hidden">最初から</button></div>
+      <div class="play-note"><span class="tiny-screen"></span><span id="device-note">スマホ・タブレット・PC対応 · v1.5.1</span><span id="resume-note" class="hidden"></span><button id="new-run" class="reset-run hidden">最初から</button></div>
       <p id="load-error" class="load-error" role="alert"></p>
     </div>
     <aside class="operative"><div class="operative-top"><span>YOUR OPERATIVE</span><b>01 / SURVIVOR</b></div><div class="portrait"><img src="assets/survivor.jpeg" alt="帽子と拳銃を装備した生存者"><div class="portrait-lines"></div><span class="portrait-status">● &nbsp; READY TO DEPLOY</span></div><div class="operative-bottom"><div><small>CALLSIGN</small><strong>THE WANDERER</strong></div><span class="operative-cross">+</span></div><div class="weapon-line"><span>SIDEARM</span><b>9mm PISTOL</b><span>12 ROUNDS</span></div></aside>
@@ -49,11 +49,11 @@
     <div id="look-zone" aria-label="スワイプで視点を操作"></div>
     <button id="reload" class="game-button reload" aria-label="リロード"><span>⟳</span><small>RELOAD</small></button>
     <button id="weapon-switch" class="game-button weapon-switch" aria-label="武器を選ぶ" disabled><span id="weapon-icon"></span><small>武器切替</small></button>
-    <button id="fire" class="game-button fire" aria-label="射撃"><span>⌖</span><small>FIRE</small></button>
+    <button id="fire" class="game-button fire" aria-label="射撃"><span>⌖</span><small id="fire-label">FIRE</small></button>
     <div id="damage-flash"></div><div id="muzzle-flash"></div>
   </div>
 
   <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-card"><small id="modal-eyebrow">FIELD MANUAL</small><h2 id="modal-title">生き残るために。</h2><div id="modal-body"></div><button id="modal-primary" class="start-button"><span id="modal-button-label">了解した</span><span>→</span></button><button id="modal-secondary" class="text-button hidden">タイトルへ戻る</button></div></div>
-  <script src="engine.js?v=1.4.3"></script><script src="audio.js?v=1.4.3"></script><script src="game.js?v=1.4.3"></script>
+  <script src="engine.js?v=1.5.1"></script><script src="audio.js?v=1.5.1"></script><script src="game.js?v=1.5.1"></script>
 </body>
 </html>

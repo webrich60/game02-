@@ -124,3 +124,9 @@ body{touch-action:manipulation}#world,#hud{touch-action:none}.modal,.modal-card{
 @media(max-height:300px) and (orientation:landscape){.radar-panel{left:calc(max(16px,env(safe-area-inset-left)) + 112px)}}
 
 .audio-alternative{width:100%;margin:12px 0 4px;min-height:44px;border:1px solid #d8c49a77;background:#2b3023;color:#eee4c4;font:inherit;font-size:12px;touch-action:manipulation}
+
+#crosshair[data-weapon="rocket"]{width:60px;height:60px;border:2px dashed #ff9852;border-radius:50%;filter:drop-shadow(0 0 4px #ff985288)}#crosshair[data-weapon="rocket"] i{display:none}#crosshair[data-weapon="rocket"] b{left:27px;top:27px;width:3px;height:3px;background:#ffb57a}
+
+.ammo-panel #ammo-status[data-feedback="true"]{display:block;color:#ffc18a;font-size:11px;line-height:1.25;letter-spacing:0;min-height:14px}
+
+#fire:disabled{cursor:not-allowed;border-color:#a2867177;background:#261d18aa}#fire:disabled>span{color:#998b80}

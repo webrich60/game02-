@@ -1,17 +1,28 @@
 {
-  "version": "1.4.3",
+  "version": "1.5.1",
   "stages": 6,
   "totalZombies": 270,
-  "elitePerStage": 1,
+  "elitePerStage": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
   "eliteHP": [
     6,
     10,
-    14,
-    18,
-    22,
-    26
+    21,
+    25,
+    29,
+    33
   ],
-  "weapons": 6,
+  "eliteMinHitsFromStage3": 3,
+  "weapons": 7,
+  "rocketUnlockStage": 3,
+  "rocketMaxTargets": 10,
+  "rocketShotsPerStage": 10,
   "files": {
     "assets/audio/ambience.wav": "e037f643b36cc8896d54b80d6b93f86a66f57395c403289b915254cd67f817e2",
     "assets/audio/blast.wav": "d939448b80a495ce7ac24a1b4a77d4855c1eb8fea8e35f59f028eb7e778684bc",
@@ -22,6 +33,7 @@
     "assets/audio/reload.wav": "ef1784365d808d936566dce2dc877da68efeb37f647fa1aab0f0b581fab1bbf9",
     "assets/audio/reward.wav": "06980295f450c8e00d9629fed012021bd83edb5a028804dacaba98efa58660a6",
     "assets/audio/rifle.wav": "7fbabf9fb4254b1b94066c987329fa0f23ad964462963881b86e00ec3bd1a770",
+    "assets/audio/rocket.wav": "ee1cccd6cde1e8be180521b16c676e51d555fc0803daf56d2405008fde7e0cbd",
     "assets/audio/shot.wav": "a81a66b8662b0871675f6b59030f841a3e3c3805d2b97ec7fe826db4e6e43f5f",
     "assets/audio/shotgun.wav": "51ddd84e875de2a1babcaf3e44e5b4153819e6d4a1445e08304a1741f3ea136b",
     "assets/audio/smg.wav": "0bb0d4e9e3ee12997be798a445490b63f9d29281d58fab5b4d86609e4cc93ddf",
@@ -32,11 +44,11 @@
     "assets/street.jpeg": "46731fe5aab3b7e2642016c341c029b47931b5d81fb0666ac7ece2dea855d279",
     "assets/survivor.jpeg": "95bbd85f7664c4870919a0c5a6a5a047dca9e391b5e72d8a181b411303f0dc08",
     "assets/zombie.jpeg": "9f5eb3dbb8519ae72836e1128c3e7c7738dd1edf59f3d815fd0dbce0674ff633",
-    "audio.js": "496eb9da4cc3489c1f447c021154acec79481872995384679cae7525e612e829",
+    "audio.js": "b673b05a212922412e8918cd9a86f2b9f1e084b8b3ed36170d38be0474ff080a",
     "engine.js": "64bc80ffa064182f5c65ba8bd7f9ddb3ced291e82397dcaf7be8f04745ae96b8",
-    "game.js": "ea026ba9836f7bcf704161f43152fbe6b39ee6dc0243bce7bdff671f5def221e",
+    "game.js": "3de78ee21caede1e05b6fd2d47c7e095f0a07747df9da0c6b2929934bc6d1820",
     "icon.svg": "9ada1167f6ec65f71c5cf92681bd2bb6f11c92e77941c5edf9ff4a8a4fe3b5f8",
-    "index.html": "922d711ec5ab62fa5e8b532e6f730e0a92a18759f4a6b90e9cb969e7b782d7eb",
-    "style.css": "8038351a7796b5d1c7fb5e947cc36eb94f1001945092b91e9c399b34be5552b0"
+    "index.html": "9574486afe628395c2b5346f755af49ac3d52b2d9e9a8b210ed65f2c1ed99841",
+    "style.css": "00d941f428e230836e51640dcead9a28f4c694a10524c1500e66c6e7d2b12b53"
   }
 }

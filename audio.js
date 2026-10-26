@@ -40,8 +40,8 @@
       try{
         if(!this.media.length)for(let i=0;i<6;i++){const audio=new window.Audio();audio.preload='auto';audio.setAttribute('playsinline','');this.media.push(audio);}
         const audio=this.media.find(a=>a.paused||a.ended)||this.media.shift();if(!this.media.includes(audio))this.media.push(audio);audio.dsPlayId=(audio.dsPlayId||0)+1;const playId=audio.dsPlayId;
-        const clip=['shot','smg','shotgun','rifle','launcher','pulse','reward','test','hit','hurt','reload','warning','blast','ambience','wave','unlock'].includes(type)?type:'wave';
-        audio.src='assets/audio/'+clip+'.wav?v=1.4.3';audio.volume=this.volume;audio.muted=false;
+        const clip=['shot','smg','shotgun','rifle','launcher','pulse','rocket','reward','test','hit','hurt','reload','warning','blast','ambience','wave','unlock'].includes(type)?type:'wave';
+        audio.src='assets/audio/'+clip+'.wav?v=1.5.1';audio.volume=this.volume;audio.muted=false;
         const playing=audio.play();
         return Promise.resolve(playing).then(()=>{if(this.mode!=='media'||!this.enabled||audio.dsPlayId!==playId)return false;this.mediaReady=true;this.error='';this.status();return true;}).catch(()=>{if(this.mode==='media'&&this.enabled&&audio.dsPlayId===playId){this.mediaReady=false;this.error='音を開始できません。もう一度テストを押し、端末のメディア音量とブラウザの音声許可を確認してください';this.status();}return false;});
       }catch{this.error='別の音声再生を開始できませんでした';this.status();return Promise.resolve(false);}
@@ -78,6 +78,7 @@
       else if(type==='rifle'){this.noise(.23,.64,1400);this.note(650,.1,.23,'sawtooth',0,90);}
       else if(type==='launcher'){this.note(190,.23,.5,'triangle',0,55);this.noise(.2,.28,400);}
       else if(type==='pulse'){this.note(1800,.2,.3,'sine',0,350);this.note(2300,.12,.13,'triangle',0,650);}
+      else if(type==='rocket'){this.noise(.85,.85,120);this.note(90,.65,.5,'triangle',0,28);this.note(1000,.12,.22,'sawtooth',0,180);}
       else if(type==='reward'){for(let i=0;i<4;i++)this.note([330,440,554,660][i],.35,.22,'triangle',i*.13);}
       else if(type==='test'){this.note(660,.3,.35,'sine');this.note(880,.35,.32,'sine',.32);}
       else if(type==='hit')this.note(620,.12,.2,'triangle',0,180);
